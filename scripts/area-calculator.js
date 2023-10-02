@@ -34,10 +34,19 @@ function calculateParallelogramArea() {
     const height = getInputValue('parallelogram-height');
 
     const area = base * height;
+    const areaTwoDecimal = area.toFixed(2);
 
-    setElementInnerText('parallelogram-area', area);
+    setElementInnerText('parallelogram-area', areaTwoDecimal);
 }
 
+function calculateEllipseArea() {
+    const majorRadius = getInputValue('ellipse-major-radius');
+    const minorRadius = getInputValue('ellipse-minor-radius');
+
+    const area = 3.14 * majorRadius * minorRadius;
+
+    setElementInnerText('ellipse-area', area);
+}
 
 // Reuseable Function to get input field value in number
 function getInputValue(fieldId) {

@@ -28,50 +28,81 @@
                         <h2 class="card-title">Triangle</h2>
                         <p>Area (A) = 0.5 X b X h</p>
                         <p>
-                            <input type="text" id="triangle-base" class="border text-xl w-24 px-2 bg-slate-200" placeholder="base">
+                            <input type="number" id="triangle-base" class="border text-xl w-24 px-2 bg-slate-200"
+                                placeholder="base">
                             <span class="ml-2">cm</span>
-                            <input type="text" id="triangle-height" class="border text-xl w-24 px-2 bg-slate-200" placeholder="height">
+                            <input type="number" id="triangle-height" class="border text-xl w-24 px-2 bg-slate-200"
+                                placeholder="height">
                             <span class="ml-2">cm</span>
                         </p>
                         <p class="text-2xl">Area: <span id="triangle-area">0</span> cm <sup>2</sup></p>
                         <div class="card-actions">
-                            <button onclick="calculateTriangleArea()" class="btn btn-info text-white text-lg font-bold w-full">Calculate</button>
+                            <button onclick="calculateTriangleArea()"
+                                class="btn btn-info text-white text-lg font-bold w-full">Calculate</button>
                         </div>
                     </div>
                 </div>
                 <!-- Rectangle card -->
                 <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure><img src="images/rectangle.png"/></figure>
+                    <figure><img src="images/rectangle.png" /></figure>
                     <div class="card-body">
                         <h2 class="card-title">Rectangle</h2>
                         <p>Area (A) = W X l</p>
                         <p>
-                            <input type="text" id="rectangle-width" class="border text-xl w-24 px-2 bg-slate-200" placeholder="width">
+                            <input type="text" id="rectangle-width" class="border text-xl w-24 px-2 bg-slate-200"
+                                placeholder="width">
                             <span class="ml-2">cm</span>
-                            <input type="text" id="rectangle-length" class="border text-xl w-24 px-2 bg-slate-200" placeholder="length">
+                            <input type="text" id="rectangle-length" class="border text-xl w-24 px-2 bg-slate-200"
+                                placeholder="length">
                             <span class="ml-2">cm</span>
                         </p>
                         <p class="text-2xl">Area: <span id="rectangle-area">0</span> cm <sup>2</sup></p>
                         <div class="card-actions">
-                            <button onclick="calculateRectangleArea()" class="btn btn-info text-white text-lg font-bold w-full">Calculate</button>
+                            <button onclick="calculateRectangleArea()"
+                                class="btn btn-info text-white text-lg font-bold w-full">Calculate</button>
                         </div>
                     </div>
                 </div>
                 <!-- Parallelogram card -->
                 <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure><img src="images/parallelogram.png"/></figure>
+                    <figure><img src="images/parallelogram.png" /></figure>
                     <div class="card-body">
                         <h2 class="card-title">Parallelogram</h2>
                         <p>Area (A) = b X h</p>
                         <p>
-                            <input type="text" id="parallelogram-base" class="border text-xl w-24 px-2 bg-slate-200" placeholder="base">
+                            <input type="text" id="parallelogram-base" class="border text-xl w-24 px-2 bg-slate-200"
+                                placeholder="base">
                             <span class="ml-2">cm</span>
-                            <input type="text" id="parallelogram-height" class="border text-xl w-24 px-2 bg-slate-200" placeholder="height">
+                            <input type="text" id="parallelogram-height" class="border text-xl w-24 px-2 bg-slate-200"
+                                placeholder="height">
                             <span class="ml-2">cm</span>
                         </p>
                         <p class="text-2xl">Area: <span id="parallelogram-area">0</span> cm <sup>2</sup></p>
                         <div class="card-actions">
-                            <button onclick="calculateParallelogramArea()" class="btn btn-info text-white text-lg font-bold w-full">Calculate</button>
+                            <button onclick="calculateParallelogramArea()"
+                                class="btn btn-info text-white text-lg font-bold w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ellipse card -->
+
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure><img src="images/ellipse.png" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Ellipse</h2>
+                        <p>Area (A) = π ab</p>
+                        <p>
+                            <input type="text" id="ellipse-major-radius" class="border text-xl w-24 px-2 bg-slate-200"
+                                placeholder="large">
+                            <span class="ml-2">cm</span>
+                            <input type="text" id="ellipse-minor-radius" class="border text-xl w-24 px-2 bg-slate-200"
+                                placeholder="short">
+                            <span class="ml-2">cm</span>
+                        </p>
+                        <p class="text-2xl">Area: <span id="ellipse-area">0</span> cm <sup>2</sup></p>
+                        <div class="card-actions">
+                            <button onclick="calculateEllipseArea()"
+                                class="btn btn-info text-white text-lg font-bold w-full">Calculate</button>
                         </div>
                     </div>
                 </div>
