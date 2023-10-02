@@ -12,6 +12,9 @@ function calculateTriangleArea() {
     const areaSpan = document.getElementById('triangle-area');
     areaSpan.innerText = area;
 
+    // add to calculation entry
+    addToCalculationEntry('Triangle', area)
+
 }
 
 function calculateRectangleArea() {
@@ -32,6 +35,9 @@ function calculateRectangleArea() {
     }
     const rectangleAreaSpan = document.getElementById('rectangle-area');
     rectangleAreaSpan.innerText = area;
+
+    // add to calculation entry
+    addToCalculationEntry('Rectangle', area)
 }
 
 function calculateParallelogramArea() {
@@ -46,6 +52,9 @@ function calculateParallelogramArea() {
     const area = base * height;
 
     setElementInnerText('parallelogram-area', area);
+
+    // add to calculation entry
+    addToCalculationEntry('Parallelogram', area)
 }
 
 function calculateEllipseArea() {
@@ -56,24 +65,32 @@ function calculateEllipseArea() {
     const areaTwoDecimal = area.toFixed(2);
 
     setElementInnerText('ellipse-area', areaTwoDecimal);
+
+    // add to calculation entry
+    addToCalculationEntry('Ellipse', areaTwoDecimal)
 }
 
-function calculateRhombusArea(){
+function calculateRhombusArea() {
     const firstDiagonal = getInputValue('rhombus-diagonal-one');
     const secondDiagonal = getInputValue('rhombus-diagonal-one');
 
     const area = 0.5 * firstDiagonal * secondDiagonal;
 
     setElementInnerText('rhombus-area', area);
+    // add to calculation entry
+    addToCalculationEntry('Rhombus', area)
 }
-function calculatePentagonArea(){
+function calculatePentagonArea() {
     const perimeter = getInputValue('pentagon-perimeter');
     const apothem = getInputValue('pentagon-apothem');
 
     const area = 0.5 * perimeter * apothem;
 
     setElementInnerText('pentagon-area', area);
+    // add to calculation entry
+    addToCalculationEntry('Pentagon', area)
 }
+
 
 // Reuseable Function to get input field value in number
 function getInputValue(fieldId) {
@@ -86,4 +103,25 @@ function getInputValue(fieldId) {
 function setElementInnerText(elementId, area) {
     const element = document.getElementById(elementId);
     element.innerText = area;
+}
+
+// add to calculation entry
+/*
+1.Get the element where you want to add the Dynamic HTML
+2.create an element you want to add
+3.if needed add some class
+4.set innerHTMl it could be dynamic Template String
+5. append the created element as a child of the parent
+*/
+function addToCalculationEntry(areaType, area) {
+    const calculationEntry = document.getElementById('calculation-entry');
+    const p = document.createElement('p');
+    // p.innerHTML = areaType + ' ' + area;
+    p.classList.add('text-xl', 'p-2');
+    // for counting
+    const count = calculationEntry.childElementCount;
+    p.innerHTML = `${count + 1} ${areaType} ${area} cm<sup>2</sup>
+    <button class="btn btn-sm btn-success">Convert</button>
+    `;
+    calculationEntry.appendChild(p);
 }
