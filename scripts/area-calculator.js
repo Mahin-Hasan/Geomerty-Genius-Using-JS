@@ -25,6 +25,11 @@ function calculateRectangleArea() {
 
     const area = width * length;
 
+    // validation
+    if (isNaN(width) || isNaN(length)) {
+        alert('Please Insert A Number');
+        return;
+    }
     const rectangleAreaSpan = document.getElementById('rectangle-area');
     rectangleAreaSpan.innerText = area;
 }
@@ -32,11 +37,15 @@ function calculateRectangleArea() {
 function calculateParallelogramArea() {
     const base = getInputValue('parallelogram-base');
     const height = getInputValue('parallelogram-height');
+    // validation
+    if (isNaN(base) || isNaN(height)) {
+        alert('Please Insert A Number');
+        return;
+    }
 
     const area = base * height;
-    const areaTwoDecimal = area.toFixed(2);
 
-    setElementInnerText('parallelogram-area', areaTwoDecimal);
+    setElementInnerText('parallelogram-area', area);
 }
 
 function calculateEllipseArea() {
@@ -44,8 +53,26 @@ function calculateEllipseArea() {
     const minorRadius = getInputValue('ellipse-minor-radius');
 
     const area = 3.14 * majorRadius * minorRadius;
+    const areaTwoDecimal = area.toFixed(2);
 
-    setElementInnerText('ellipse-area', area);
+    setElementInnerText('ellipse-area', areaTwoDecimal);
+}
+
+function calculateRhombusArea(){
+    const firstDiagonal = getInputValue('rhombus-diagonal-one');
+    const secondDiagonal = getInputValue('rhombus-diagonal-one');
+
+    const area = 0.5 * firstDiagonal * secondDiagonal;
+
+    setElementInnerText('rhombus-area', area);
+}
+function calculatePentagonArea(){
+    const perimeter = getInputValue('pentagon-perimeter');
+    const apothem = getInputValue('pentagon-apothem');
+
+    const area = 0.5 * perimeter * apothem;
+
+    setElementInnerText('pentagon-area', area);
 }
 
 // Reuseable Function to get input field value in number
